@@ -1,0 +1,13 @@
+# 系統檔
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 編輯器
+.vscode/
+.idea/
+.settings/
+.project
+
+# Claude Code 本機設定
+.claude/settings.local.json

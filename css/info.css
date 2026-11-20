@@ -1,0 +1,78 @@
+/* info 設定區 */
+:root {
+	/* 各元素字體大小 */
+	--info-people-name-font-size: calc(1rem + 1vw);
+	--info-people-eng-font-size: calc(1rem + 0.1vw);
+	--info-date-text-font-size: calc(1rem + 0.5vw);
+	/* 小螢幕字體大小 */
+	--info-people-name-font-size-small: calc(1rem + 1vw);
+	--info-people-eng-font-size-small: calc(0.4rem + 1vw);
+	--info-date-text-font-size-small: calc(0.8rem + 1vw);
+}
+
+/* 設定 section 的樣式 */
+.info-section {
+	/* 允許使用絕對定位 */
+	position: relative;
+	/* 文字置中 */
+	text-align: center;
+	/* 設定高度為自動 */
+	height: auto;
+}
+
+/* info 內容樣式 */
+.info-content {
+	/* 最大寬度 */
+	max-width: 100%;
+	/* 水平置中 */
+	margin: 0 auto;
+	margin-top: 2vw;
+}
+
+/* 新娘、新郎區塊間距 */
+.info-spacing {
+	margin-top: 0;
+}
+
+/* 中文名 */
+.info-people-name {
+	font-size: var(--info-people-name-font-size);
+	margin: 0;
+}
+
+/* 英文名 */
+.info-people-eng {
+	font-size: var(--info-people-eng-font-size);
+	margin-bottom: 1vw;
+}
+
+/* 日期內文 */
+.info-date-text {
+	font-size: var(--info-date-text-font-size);
+	margin-bottom: 2vw;
+}
+
+/* 背景圖片 */
+.info-bg {
+	background-image: url('../img/info.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+}
+
+/* RWD 設定 */
+@media ( max-width : 768px) {
+	.info-section {
+		height: 40vw !important;
+	}
+	.info-people-name {
+		font-size: var(--info-people-name-font-size-small);
+	}
+	.info-people-eng {
+		font-size: var(--info-people-eng-font-size-small);
+		margin-top: -1.8vw;
+	}
+	.info-date-text {
+		font-size: var(--info-date-text-font-size-small);
+	}
+}

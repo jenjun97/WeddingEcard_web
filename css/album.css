@@ -1,0 +1,51 @@
+/* album 設定區 */
+:root {
+	--album-title-top: 50%; /* 標題垂直位置 */
+	--album-title-left: 50%; /* 標題水平位置 */
+	--album-title-font-size: 2rem; /* 大視窗字體大小 */
+	--album-title-font-size-small: 1.2em; /* 小視窗字體大小 */
+}
+
+/* 設定 section 的樣式 */
+.album-section {
+	/* 允許使用絕對定位 */
+	position: relative;
+	/* 文字置中 */
+	text-align: center;
+}
+
+/* album 內容樣式 */
+.album-content {
+	/* 最大寬度 */
+	max-width: 100%;
+	/* 上下外邊距為0，自動水平對齊 */
+	margin: 0 auto;
+}
+
+/* 相簿封面圖片：寬度填滿、高度依比例 */
+.album-img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* 「婚紗照搶先看」文字樣式 */
+.album-title {
+	color: white; /* 文字顏色為白色 */
+	background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+	position: absolute; /* 絕對定位 */
+	top: var(--album-title-top);
+	left: var(--album-title-left);
+	transform: translate(-50%, -50%); /* 中心點對齊 */
+	padding: 10px;
+	border-radius: 5px;
+	font-size: var(--album-title-font-size);
+	z-index: 10;
+}
+
+/* RWD 設定 */
+@media ( max-width : 768px) {
+	.album-title {
+		font-size: var(--album-title-font-size-small);
+	}
+}

@@ -1,0 +1,72 @@
+/* remind 設定區 */
+/*
+ * 小鳥按鈕原始尺寸：寬 280px、高 80px，上方小鳥高 54px（見 bird.css）。
+ * 用 --btn-scale 等比縮小按鈕，並讓 .remind-item 的實際佔位跟著縮小，
+ * 不需要用負 margin 硬擠。視窗太窄時會自動換行（例如 2 + 1）。
+ */
+:root {
+	--btn-w: 280px; /* 按鈕原始寬度 */
+	--btn-h: 134px; /* 按鈕 80px + 小鳥 54px */
+	--btn-scale: 0.7; /* 大視窗縮放比例 */
+	--btn-gap: 1rem; /* 按鈕間距 */
+}
+
+/* 設定 section 的樣式 */
+.remind-section {
+	text-align: center;
+}
+
+/* 背景顏色 */
+.remind-bg-color {
+	background-color: #ffffff;
+}
+
+.remind-title {
+	font-size: 2rem;
+	margin: 1rem auto;
+}
+
+/* 按鈕列 */
+.remind-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--btn-gap);
+	margin-bottom: 1rem;
+}
+
+/* 每個按鈕的佔位：大小 = 原始尺寸 × 縮放比例 */
+.remind-item {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: calc(var(--btn-w) * var(--btn-scale));
+	height: calc(var(--btn-h) * var(--btn-scale));
+}
+
+/* 按鈕本體以底部中心為基準縮放 */
+.remind-item > .button {
+	flex-shrink: 0;
+	transform: scale(var(--btn-scale));
+	transform-origin: center bottom;
+}
+
+/* RWD 設定 */
+@media ( max-width : 768px) {
+	/* 手機：維持一排三個 */
+	:root {
+		--btn-scale: 0.4;
+		--btn-gap: 0.5rem;
+	}
+	.remind-title {
+		font-size: 5vw;
+	}
+}
+
+/* 很窄的手機（如 iPhone SE 第一代 320px） */
+@media ( max-width : 400px) {
+	:root {
+		--btn-scale: 0.32;
+		--btn-gap: 0.3rem;
+	}
+}

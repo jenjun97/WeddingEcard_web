@@ -1,0 +1,94 @@
+/* hall 設定區 */
+/* 設定 section 的樣式 */
+.hall-section {
+	/* 允許使用絕對定位 */
+	position: relative;
+	/* 文字置中 */
+	text-align: center;
+	/* 背景圖像覆蓋區塊 */
+	background-size: cover;
+	/* 背景圖像置中 */
+	background-position: center;
+	/* 設定高度為自動 */
+	height: auto;
+}
+
+/* 背景圖片 */
+.hall-bg-img {
+	background-image: url('../img/hall.jpg');
+}
+
+/* info 內容樣式 */
+.hall-content {
+	/* 背景透明 */
+	background-color: transparent;
+	/* 最大寬度 */
+	max-width: 100%;
+	/* 上下外邊距為0，自動水平對齊 */
+	margin: 0 auto;
+}
+
+/* info 間距樣式 */
+.hall-spacing {
+	/* 上邊距 */
+	margin-top: 1rem;
+}
+
+.hall-title {
+	font-size: 2rem;
+	margin-top: 1rem;
+}
+
+.hall-text {
+	font-size: 1.5rem;
+}
+
+.hall-parking-title {
+	text-align: left;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.hall-parking-text {
+	text-align: left;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+/* 電話連結：維持原本文字外觀（hall、contacts 共用） */
+.tel-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Google 地圖 iframe 樣式（allowfullscreen 等屬性寫在 HTML 標籤上） */
+.map-iframe {
+	width: 100%; /* 寬度100% */
+	height: 20vw; /* 高度隨視窗寬度 */
+	border: 0; /* 移除邊框 */
+}
+
+/* RWD 設定 */
+@media ( max-width : 768px) {
+	.hall-title {
+		font-size: 1.1rem;
+	}
+	.hall-text {
+		font-size: 1rem;
+	}
+	.hall-parking-title {
+		font-size: 0.7rem;
+	}
+	.hall-parking-text {
+		text-align: left;
+		font-size: 0.7rem;
+		margin-bottom: 0;
+	}
+}
+
+/* 在大視窗的時候確保地圖左欄填滿 */
+@media ( min-width : 768px) {
+	.hall-section .col-6 {
+		flex: 0 0 50%; /* 設定彈性盒子項目的基礎尺寸為50% */
+		max-width: 50%; /* 設定最大寬度為50% */
+	}
+}

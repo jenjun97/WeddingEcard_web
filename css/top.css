@@ -1,0 +1,60 @@
+/* top 設定區 */
+
+/* 設定每個 section 的樣式 */
+.top-section {
+	/* 允許使用絕對定位 */
+	position: relative;
+	/* 文字置中 */
+	text-align: center;
+	/* 背景圖像覆蓋區塊 */
+	background-size: cover;
+	/* 背景圖像置中 */
+	background-position: center;
+	/* 設定高度為自動 */
+	height: auto;
+	/* 根據圖片的比例設定底部填充來維持高度 */
+	padding-bottom: 55%;
+}
+
+/*首頁-大標題*/
+.top-title {
+	margin: 0;
+	font-size: calc(1.5rem + 5vw) !important;
+	color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/*首頁-子標題*/
+.top-sub-title {
+	margin: 0;
+	font-size: calc(1.5rem + 0.5vw) !important;
+	color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 背景圖片 */
+.top-bg {
+	background-image: url('../img/IMG_1683-L-P.jpg');
+}
+
+/* overlay 容器樣式 */
+.top-overlay-container {
+	position: absolute;
+	bottom: var(--overlay-bottom-offset, 10px);
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+}
+
+/* RWD 設定 */
+@media ( max-width : 768px) {
+	.top-title {
+		font-size: calc(2rem + 1vw);
+	}
+	.top-sub-title {
+		/* font-size: calc(1rem + 0.1vw); */
+		font-size: 3vw !important;
+	}
+	.top-section {
+		/* 根據圖片的比例設定底部填充來維持高度 */
+		padding-bottom: 70%;
+	}
+}
